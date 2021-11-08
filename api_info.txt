@@ -1,0 +1,41 @@
+So here Create a REST API in PHP with MySQL
+I will explain here simply  how to create a REST API in PHP with MySQL.
+ 
+What is REST API and  how it works??
+ 
+The Re stands for Representational
+ST stands for State Transfer.
+Ok, REST API is used for creating web services that can be accessed online, the current crud php application, we can use REST API for 
+Insert, Select, Update and Delete. 
+For REST API we use HTTP methods for example GET, POST, PUT and DELETE.
+
+
+GET – To retrieve information, From the URL as parameters
+POST – To create a new data record, will send data in the background 
+PUT – To update existing data record.
+DELETE – To delete data record
+
+
+The REST API, we  can retrieve information, get  responses in a JSON
+
+In php we can use the function json_encode() to  encode an array to JSON format.
+
+ 
+header("Content-Type:application/json"); 
+if (isset($_GET['id']) && $_GET['id']!="") {
+$userData['id'] = $res['id'];
+$userData['name'] = $res['name'];
+$userData['emaill'] = $res['email'];
+$userData['username'] =  $res['username'];
+$response["status"] = "true";
+$response["message"] = "Customer Details";
+$response["customers"] = $userData;
+}
+else{
+$response["status"] = "false";
+$response["message"] = "No data  is found!";
+}
+echo json_encode($response); 
+exit;
+
+ 
