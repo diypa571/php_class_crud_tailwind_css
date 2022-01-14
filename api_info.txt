@@ -1,4 +1,4 @@
-So here Create a REST API in PHP with MySQL
+Creating a REST API with PHP&MySQL
 API stands for application Programming Interface.
 I will explain here simply  how to create a REST API in PHP with MySQL.
  
